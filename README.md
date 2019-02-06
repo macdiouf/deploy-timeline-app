@@ -64,8 +64,41 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 * mvn clean
 * mvn install
 
-5. Créer l'image Docker de l'application
+5. Créer l'image Docker de l'application (timeline) à partir du Dockerfile
 * docker build . -t timeline
 
 6. Démarrer l'image de l'appli et faire le lien avec le conteneur de la base de données MYSQL
 * docker run -h *:* -p 8089:8089 --name timeline --link timeline-docker-container:mysql -d timeline
+
+# Quelques commandes Docker utiles
+Les commandes permettant l’intéraction avec le moteur Docker sont les suivantes :
+- Recherche d’image : docker search [mot clé]
+- Téléchargement d’image (depuis le docker Hub) : docker pull [mot clé]
+- Téléchargement d’image : docker push [dossier]/[image]
+- Connaître le nombre d’images téléchargées : docker info
+- Afficher la liste d’images disponibles : docker images
+- Stopper un conteneur : docker stop [containerID]
+- Effacer un conteneur : docker rm [containerID]
+- Redémarrer un conteneur : docker restart [containerID]
+- Envoyer des signaux à un conteneur : docker kill [containerID]
+- Afficher les conteneurs actifs : docker ps
+- Afficher les conteneurs en tâche de fond : docker ps -a
+- Créer une image docker à partir d’un Dockerfile : docker build
+
+La prochaine commande contient des options importantes que nous détaillerons :
+- Démarrer un conteneur
+docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+
+Les options sont les suivantes :
+-i Garder STDIN ouvert, même si pas attaché
+-t Allouer un pseudo-terminal
+-p Permet de publier un conteneur, et accessible via une translation de port depuis le serveur.
+-d Active le mode daemon. Le conteneur sera actif et en tâche de fond
+-e Force Docker a utiliser un driver exec sépcifique
+--name Pour identifier un conteneur par un nom au lieu d’un ID
+--dns Pour définir un DNS personnalisé
+--net="" Pour définir le mode réseau entre “Bridge”, “none”, “container:” et “host”
+--add-host Modifie le contenu du fichier “hosts” en y ajoutant les valeurs spécifiées
+--link Permet d’ajouter un lien vers un autre conteneur
+-c Permet de créer un partage
+-v Permet de lier un un dossier sur le serveur au conteneur
