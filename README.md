@@ -46,7 +46,7 @@ export PATH=${M2_HOME}/bin:${PATH}
 ```
 FROM openjdk:8
 ADD target/timeline.jar timeline.jar
-EXPOSE 8086
+EXPOSE 8089
 ENTRYPOINT ["java", "-jar", "timeline.jar"]
 ```
 
