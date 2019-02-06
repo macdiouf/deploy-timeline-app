@@ -68,4 +68,4 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 * docker build . -t timeline
 
 6. Démarrer l'image de l'appli et faire le lien avec le conteneur de la base de données MYSQL
-* docker run -h *:* -p 8090:8090 --name timeline --link timeline-docker-container:mysql -d timeline
+* docker run -h *:* -p 8089:8089 --name timeline --link timeline-docker-container:mysql -d timeline
