@@ -54,9 +54,9 @@ ENTRYPOINT ["java", "-jar", "timeline.jar"]
 ```
 server.port=8089
 spring.jpa.hibernate.ddl-auto=create
-spring.datasource.url=jdbc:mysql://~~92.222.217.188:2015~~/timeline?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-spring.datasource.username=~~simplon~~
-spring.datasource.password=~~passer~~
+spring.datasource.url=jdbc:mysql://@IP:2015/timeline?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring.datasource.username=simplon
+spring.datasource.password=passer
 spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 ```
