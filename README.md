@@ -73,22 +73,22 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 
 # Quelques commandes Docker utiles
 Les commandes permettant l’intéraction avec le moteur Docker sont les suivantes :
-- Recherche d’image : docker search [mot clé]
-- Téléchargement d’image (depuis le docker Hub) : docker pull [mot clé]
-- Téléchargement d’image : docker push [dossier]/[image]
-- Connaître le nombre d’images téléchargées : docker info
-- Afficher la liste d’images disponibles : docker images
-- Stopper un conteneur : docker stop [containerID]
-- Effacer un conteneur : docker rm [containerID]
-- Redémarrer un conteneur : docker restart [containerID]
-- Envoyer des signaux à un conteneur : docker kill [containerID]
-- Afficher les conteneurs actifs : docker ps
-- Afficher les conteneurs en tâche de fond : docker ps -a
-- Créer une image docker à partir d’un Dockerfile : docker build
+- Recherche d’image : **docker search [mot clé]**
+- Téléchargement d’image (depuis le docker Hub) : **docker pull [mot clé]**
+- Téléchargement d’image : **docker push [dossier]/[image]**
+- Connaître le nombre d’images téléchargées : **docker info**
+- Afficher la liste d’images disponibles : **docker images**
+- Stopper un conteneur : **docker stop [containerID]**
+- Effacer un conteneur : **docker rm [containerID]**
+- Redémarrer un conteneur : **docker restart [containerID]**
+- Envoyer des signaux à un conteneur : **docker kill [containerID]**
+- Afficher les conteneurs actifs : **docker ps**
+- Afficher les conteneurs en tâche de fond : **docker ps -a**
+- Créer une image docker à partir d’un Dockerfile : **docker build**
 
 La prochaine commande contient des options importantes que nous détaillerons :
 - Démarrer un conteneur
-docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+**docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]**
 
 Les options sont les suivantes :
 * -i Garder STDIN ouvert, même si pas attaché
