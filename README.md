@@ -51,7 +51,7 @@ ENTRYPOINT ["java", "-jar", "timeline.jar"]
 ```
 
 3. Editer le fichier application.properties
-
+```
 server.port=8089
 spring.jpa.hibernate.ddl-auto=create
 spring.datasource.url=jdbc:mysql://92.222.217.188:2015/timeline?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
@@ -59,6 +59,7 @@ spring.datasource.username=simplon
 spring.datasource.password=passer
 spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+```
 
 4. Installer les dépendances avec MAVEN
 * mvn clean
@@ -90,15 +91,15 @@ La prochaine commande contient des options importantes que nous détaillerons :
 docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 
 Les options sont les suivantes :
--i Garder STDIN ouvert, même si pas attaché
--t Allouer un pseudo-terminal
--p Permet de publier un conteneur, et accessible via une translation de port depuis le serveur.
--d Active le mode daemon. Le conteneur sera actif et en tâche de fond
--e Force Docker a utiliser un driver exec sépcifique
---name Pour identifier un conteneur par un nom au lieu d’un ID
---dns Pour définir un DNS personnalisé
---net="" Pour définir le mode réseau entre “Bridge”, “none”, “container:” et “host”
---add-host Modifie le contenu du fichier “hosts” en y ajoutant les valeurs spécifiées
---link Permet d’ajouter un lien vers un autre conteneur
--c Permet de créer un partage
--v Permet de lier un un dossier sur le serveur au conteneur
+* -i Garder STDIN ouvert, même si pas attaché
+* -t Allouer un pseudo-terminal
+* -p Permet de publier un conteneur, et accessible via une translation de port depuis le serveur.
+* -d Active le mode daemon. Le conteneur sera actif et en tâche de fond
+* -e Force Docker a utiliser un driver exec sépcifique
+* --name Pour identifier un conteneur par un nom au lieu d’un ID
+* --dns Pour définir un DNS personnalisé
+* --net="" Pour définir le mode réseau entre “Bridge”, “none”, “container:” et “host”
+* --add-host Modifie le contenu du fichier “hosts” en y ajoutant les valeurs spécifiées
+* --link Permet d’ajouter un lien vers un autre conteneur
+* -c Permet de créer un partage
+* -v Permet de lier un un dossier sur le serveur au conteneur
