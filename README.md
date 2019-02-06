@@ -54,9 +54,9 @@ ENTRYPOINT ["java", "-jar", "timeline.jar"]
 ```
 server.port=8089
 spring.jpa.hibernate.ddl-auto=create
-spring.datasource.url=jdbc:mysql://92.222.217.188:2015/timeline?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-spring.datasource.username=simplon
-spring.datasource.password=passer
+spring.datasource.url=jdbc:mysql://~~92.222.217.188:2015~~/timeline?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring.datasource.username=~~simplon~~
+spring.datasource.password=~~passer~~
 spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 ```
@@ -102,4 +102,4 @@ Les options sont les suivantes :
 * --add-host Modifie le contenu du fichier “hosts” en y ajoutant les valeurs spécifiées
 * --link Permet d’ajouter un lien vers un autre conteneur
 * -c Permet de créer un partage
-* -v Permet de lier un un dossier sur le serveur au conteneur
+* -v Permet de lier un dossier sur le serveur au conteneur
