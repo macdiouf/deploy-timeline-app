@@ -4,8 +4,9 @@ Se rendre à cette adresse (https://docs.docker.com/install/linux/docker-ce/debi
 1. sudo apt-get update
 2. sudo apt-get install docker-ce
 # Creer un conteneur docker pour MySQL
+```
 docker run -p 2015:3306 --name timeline-docker-container -e MYSQL_ROOT_PASSWORD=passer -e MYSQL_DATABASE=timeline -e MYSQL_USER=simplon -e MYSQL_PASSWORD=passer -d mysql:5.5
-
+```
 # Installation et configuration de Java8
 1. sudo apt-get install oracle-java8-installer
 2. sudo update-alternatives --config java
