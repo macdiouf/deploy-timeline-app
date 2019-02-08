@@ -67,10 +67,14 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 * mvn install
 
 5. Créer l'image Docker de l'application (timeline) à partir du Dockerfile
-* docker build . -t timeline
+```
+docker build . -t timeline
+```
 
 6. Démarrer l'image de l'appli et faire le lien avec le conteneur de la base de données MYSQL
-* docker run -h *:* -p 8089:8089 --name timeline --link timeline-docker-container:mysql -d timeline
+```
+docker run -h *:* -p 8089:8089 --name timeline --link timeline-docker-container:mysql -d timeline
+```
 
 # Quelques commandes Docker utiles
 Les commandes permettant l’intéraction avec le moteur Docker sont les suivantes :
